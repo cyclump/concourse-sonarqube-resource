@@ -85,7 +85,7 @@ if [[ -n "${maven_settings_file}" ]]; then
 		exit 1
 	else
 		echo "Using Maven settings file: \"${maven_settings_file}\"..."
-		scanner_opts+=" -s \"${maven_settings_file}\""
+		scanner_opts+=" -s \"$(realpath ${maven_settings_file})\""
 	fi
 fi
 
